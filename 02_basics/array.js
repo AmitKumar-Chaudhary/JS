@@ -20,14 +20,27 @@
 //console.log(slicedFruits)
  
 
-const colors = ['red', 'green', 'blue', 'yellow', 'purple'];
+// const colors = ['red', 'green', 'blue', 'yellow', 'purple'];
 
-// 1. Delete elements
-const removedColors = colors.splice(1, 2); // Remove 2 elements starting from index 1
-console.log(removedColors); // Output: ['green', 'blue'] (the deleted elements)
-console.log(colors);        // Output: ['red', 'yellow', 'purple'] (original array modified)
+// // 1. Delete elements
+// const removedColors = colors.splice(1, 2); // Remove 2 elements starting from index 1
+// console.log(removedColors); // Output: ['green', 'blue'] (the deleted elements)
+// console.log(colors);        // Output: ['red', 'yellow', 'purple'] (original array modified)
 
-// 2. Insert elements
-colors.splice(1, 0, 'orange', 'pink'); // Insert 'orange' and 'pink' at index 1 (0 elements deleted)
-console.log(colors);                  // Output: ['red', 'orange', 'pink', 'yellow', 'purple']
+// // 2. Insert elements
+// colors.splice(1, 0, 'orange', 'pink'); // Insert 'orange' and 'pink' at index 1 (0 elements deleted)
+// console.log(colors);                  // Output: ['red', 'orange', 'pink', 'yellow', 'purple']
 
+
+// const marvel = ["Hulk", "Ironman", "Spiderman"]
+// const dc = ["Superman", "Batman", "Flash"]
+
+// const all_heroes = [...marvel, ...dc]
+
+
+const anotherArr = [1,1,[3,[13]]]
+
+const newArr = anotherArr.flat(Infinity)
+
+console.log(newArr)
+// console.log(all_heroes)
