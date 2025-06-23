@@ -1,0 +1,5 @@
+{
+    "javascript.suggest.enabled": true,
+    "typescript.tsserver.web.projectWideIntellisense.enabled": true,
+    "editor.suggest.showKeywords": true
+}
