@@ -32,18 +32,35 @@
     
 // } )
 
-const students = [
-    {
-        name: "Amit Kumar Chaudhary",
-        age: 24
-    },
-    {
-        name: "Ranjit Chaudhary",
-        age: 22
-    }
-]
+// const students = [
+//     {
+//         name: "Amit Kumar Chaudhary",
+//         age: 24
+//     },
+//     {
+//         name: "Ranjit Chaudhary",
+//         age: 22
+//     }
+// ]
 
-students.forEach( (items) => {
-    console.log(`${items.name} : ${items.age}`);
+// students.forEach( (items) => {
+//     console.log(`${items.name} : ${items.age}`);
     
+// })
+
+const myNums = [1,2,3,4,5,6,7,8]
+
+// const newNums = myNums.filter( (num) => {
+//     return num > 4
+// })
+
+// console.log(newNums);
+const newNums = []
+
+myNums.forEach( (num) => {
+    if (num > 4) {
+        newNums.push(num)
+    }
 })
+
+console.log(newNums);
