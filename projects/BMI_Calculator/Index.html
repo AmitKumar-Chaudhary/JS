@@ -99,7 +99,13 @@
             const Bmi = (weight / ((height * height) / 10000)).toFixed(2);
 
             let message = `your Bmi is:  ${Bmi}`;
-
+            if (Bmi < 18.6) {
+            message += "You are Underweight";
+        } else if (Bmi >= 18.6 && Bmi <= 24.9) {
+            message += "You are Normal weight";
+        } else {
+            message += "You are Overweight";
+        }
             results.innerHTML = message;
             results.style.color = "";
           }
