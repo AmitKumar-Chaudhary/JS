@@ -1,0 +1,22 @@
+/* Basic page tidy‑up (optional) */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 2rem;
+}
+
+/* All colour buttons */
+.button {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin: 0 8px 12px;
+  cursor: pointer;
+}
+
+/* Individual colours */
+#grey   { background: grey; }
+#white  { background: white; border: 1px solid #ccc; }
+#blue   { background: blue; }
+#yellow { background: yellow; }
