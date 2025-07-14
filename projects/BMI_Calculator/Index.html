@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .form-control {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-control label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-control input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        #results {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .bmi-guide {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e9f7ef;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <form class="form">
+            <div class="form-control">
+                <label for="height">Height (in cm)</label>
+                <input type="text" id="height" placeholder="Enter your height in cm">
+            </div>
+            <div class="form-control">
+                <label for="weight">Weight (in kg)</label>
+                <input type="text" id="weight" placeholder="Enter your weight in kg">
+            </div>
+            <button type="submit">Calculate BMI</button>
+        </form>
+        <div id="results"></div>
+        
+    </div>
+
+    <script>
+        const form = document.querySelector('.form');
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+
+          const height = parseInt(document.querySelector('#height').value);
+          const weight = parseInt(document.querySelector('#weight').value);
+          const results = document.querySelector('#results');
+
+          if(height === '' || height < 0 || isNaN(height)){
+          results.innerHTML = "Please provide a valid height";
+          results.style.color = "red";
+          
+          }else if(weight === '' || weight < 0 || isNaN(weight)){
+          results.innerHTML = "Please provide a valid weight";
+          results.style.color = "red";
+          }else{
+            const Bmi = (weight / ((height * height) / 10000)).toFixed(2);
+
+            let message = `your Bmi is:  ${Bmi}`;
+
+            results.innerHTML = message;
+            results.style.color = "";
+          }
+        })
+        
+    </script>
+</body>
+</html>
